@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
@@ -43,3 +44,5 @@ Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name(
 Route::get('/blog_grid', [App\Http\Controllers\HomeController::class, 'blog_grid'])->name('blog_grid');
 Route::get('/blog_post_page', [App\Http\Controllers\HomeController::class, 'blog_post_page'])->name('blog_post_page');
 
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
