@@ -100,6 +100,18 @@
                             <div class="mt-15">
                                 <textarea class="form-control" name="message" placeholder="Message"></textarea>
                             </div>
+                            <div class="mt-15">
+                                <div class="avatar-upload">
+                                    <div class="avatar-edit">
+                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                        <label for="imageUpload"> </label>
+                                        <span class="ml-1" style="font-size: 12px">Upload x-ray photo</span>
+                                    </div>
+                                    <div class="avatar-preview">
+                                        <div id="imagePreview"></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="mt-3">
                                 <button type="submit" class="btn btn-hover-fill"><i class="icon-right-arrow"></i><span>Send message</span><i class="icon-right-arrow"></i></button>
                             </div>
@@ -111,3 +123,21 @@
         <!--//section-->
     </div>
 @endsection
+@push('scripts')
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function() {
+            readURL(this);
+        });
+    </script>
+@endpush
