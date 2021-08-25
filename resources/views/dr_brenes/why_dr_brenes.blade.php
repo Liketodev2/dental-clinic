@@ -27,6 +27,7 @@
                 <div class="row">
                     <div class="col-lg-6 text-center text-lg-left pr-md-4">
                         <img src="images/content/image_2021_08_19T05_41_11_321Z.png" class="w-100" alt="">
+                        <div class="mt-1">Dr. Brenes Sr. & young Dr. Brenes as a student</div>
                         <div class="row mt-3">
                             <div class="col-6">
                                 <img src="images/content/about-03.jpg" class="w-100" alt="">
