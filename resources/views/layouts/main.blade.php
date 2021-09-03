@@ -15,6 +15,7 @@
     <link href="{{asset("icons/style.css")}}" rel="stylesheet">
     <link href="{{asset("vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.css")}}" rel="stylesheet">
     <link href="{{asset("css/style.css")}}" rel="stylesheet">
+    <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <!--Favicon-->
     <link rel="icon" href="{{asset("images/favicon.png")}}" type="image/x-icon">
     <!-- Google Fonts -->
