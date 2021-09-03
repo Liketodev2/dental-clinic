@@ -46,3 +46,16 @@ Route::get('/blog_post_page', [App\Http\Controllers\HomeController::class, 'blog
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// DASHBOARD
+
+Route::prefix('dashboard')
+    ->middleware(['dashboard','auth'])
+    ->group(function(){
+
+    Route::get('/index', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+
+});
+
+// DASHBOARD

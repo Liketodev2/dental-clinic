@@ -26,31 +26,34 @@ class HomeController extends Controller
         return view('about');
     }
 
-
     public function services(){
 
         return view('services.services');
     }
+
     public function service_page(){
 
         return view('services.service_page');
     }
+
     public function shop_listing(){
 
         return view('services.shop_listing');
     }
+
     public function prices(){
 
         return view('services.prices');
     }
 
-
     public function why_dr_brenes(){
         return view('dr_brenes.why_dr_brenes');
     }
+
     public function brenes_gallery_simple(){
         return view('dr_brenes.gallery_simple');
     }
+
     public function brenes_gallery(){
         return view('dr_brenes.gallery');
     }
@@ -58,9 +61,11 @@ class HomeController extends Controller
     public function our_specialist(){
         return view('specialists.our_specialist');
     }
+
     public function doctor_page(){
         return view('specialists.doctor_page');
     }
+
     public function schedule(){
         return view('specialists.schedule');
     }
@@ -72,9 +77,11 @@ class HomeController extends Controller
     public function blog(){
         return view('md_in_office.blog');
     }
+
     public function blog_grid(){
         return view('md_in_office.blog_grid');
     }
+
     public function blog_post_page(){
         return view('md_in_office.blog_post_page');
     }
