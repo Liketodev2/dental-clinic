@@ -81,7 +81,8 @@
                         </div>
                     </div>
                     <div class="col-md col-lg-6 mt-4 mt-md-0">
-                        <form class="contact-form" id="contactForm" method="post" novalidate="novalidate">
+                        <form class="contact-form" id="contactForm" method="post" novalidate="novalidate" method="POST" action="{{route('contact-form')}}">
+                            @csrf
                             <div class="successform">
                                 <p>Your message was sent successfully!</p>
                             </div>
@@ -91,15 +92,27 @@
                             <div>
                                 <input type="text" class="form-control" name="name" placeholder="Your name*">
                             </div>
+                            @error('name')
+                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
+                            @enderror
                             <div class="mt-15">
                                 <input type="text" class="form-control" name="email" placeholder="Email*">
                             </div>
+                            @error('email')
+                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
+                            @enderror
                             <div class="mt-15">
                                 <input type="text" class="form-control" name="phone" placeholder="Your Phone">
                             </div>
+                            @error('phone')
+                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
+                            @enderror
                             <div class="mt-15">
                                 <textarea class="form-control" name="message" placeholder="Message"></textarea>
                             </div>
+                            @error('message')
+                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
+                            @enderror
                             <div class="mt-15">
                                 <div class="avatar-upload">
                                     <div class="avatar-edit">

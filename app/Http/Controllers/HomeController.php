@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -84,6 +85,21 @@ class HomeController extends Controller
 
     public function blog_post_page(){
         return view('md_in_office.blog_post_page');
+    }
+
+    public function contactForm(Request $request){
+
+    $this->validate($request, [
+        'name'  => ['required'],
+        'email' => ['required'],
+        'phone' => ['required'],
+        'message' => ['required'],
+    ]);
+
+      $contact = new Contact();
+      $contact->fill($request->all());
+      $contact->save();
+
     }
 
 

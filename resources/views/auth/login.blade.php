@@ -42,17 +42,13 @@
                 <div class="form-group">
                     <input  class="form-control form-control-lg" id="email" name="email" type="text" placeholder="Email" value="{{old('email')}}">
                     @error('email')
-                    <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                    <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                     @enderror
                 </div>
                 <div class="form-group">
                     <input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Password">
                     @error('password')
-                    <span class="invalid-feedback d-block" role="alert">
-                                        <strong>{{ $message }}</strong>
-                    </span>
+                    <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>

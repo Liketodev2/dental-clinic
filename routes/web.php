@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes([
+    'register' => false,
+    'reset' => false,
+    'verify' => false,
+]);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 
@@ -23,6 +27,7 @@ Route::get('/testimonials', [App\Http\Controllers\HomeController::class, 'testim
 Route::get('/md_in_office', [App\Http\Controllers\HomeController::class, 'md_in_office'])->name('md_in_office');
 Route::get('/excursions', [App\Http\Controllers\HomeController::class, 'excursions'])->name('excursions');
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::post('/contact-form', [App\Http\Controllers\HomeController::class, 'contactForm'])->name('contact-form');
 
 Route::get('/services', [App\Http\Controllers\HomeController::class, 'services'])->name('services');
 Route::get('/service_page', [App\Http\Controllers\HomeController::class, 'service_page'])->name('service_page');
@@ -44,12 +49,10 @@ Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name(
 Route::get('/blog_grid', [App\Http\Controllers\HomeController::class, 'blog_grid'])->name('blog_grid');
 Route::get('/blog_post_page', [App\Http\Controllers\HomeController::class, 'blog_post_page'])->name('blog_post_page');
 
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 // DASHBOARD
-
 Route::prefix('dashboard')
     ->middleware(['dashboard','auth'])
     ->group(function(){
@@ -57,5 +60,4 @@ Route::prefix('dashboard')
     Route::get('/index', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
 
 });
-
 // DASHBOARD
