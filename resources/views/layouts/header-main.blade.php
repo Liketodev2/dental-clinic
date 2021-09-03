@@ -42,10 +42,10 @@
                                     <li class="nav-item">
                                         <a href="{{route('services')}}" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="{{route('services')}}">All Services</a></li>
-                                            <li><a class="dropdown-item" href="{{route('service_page')}}">Service Page</a></li>
-                                            <li><a class="dropdown-item" href="{{route('prices')}}">Prices</a></li>
-                                            <li><a class="dropdown-item" href="{{route('shop_listing')}}">Online Shop</a></li>
+                                            <li><a class="dropdown-item" href="{{route('services')}}">Crowns & Bridges</a></li>
+                                            <li><a class="dropdown-item" href="{{route('service_page')}}">Bone Grafts & Sinus Lifts</a></li>
+                                            <li><a class="dropdown-item" href="{{route('prices')}}">Implants</a></li>
+                                            <li><a class="dropdown-item" href="{{route('shop_listing')}}">All On 4 & 5 or 6</a></li>
                                         </ul>
                                     </li>
                                     <li class="nav-item">

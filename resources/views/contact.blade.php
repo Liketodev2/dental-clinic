@@ -96,23 +96,41 @@
                             <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                             <div class="mt-15">
-                                <input type="text" class="form-control" name="email" placeholder="Email*">
+                                <input type="email" class="form-control" name="email" placeholder="Email*">
                             </div>
                             @error('email')
                             <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
+
+                            <div class="mt-15">
+                                <input type="text" class="form-control" name="country" placeholder="Country*">
+                            </div>
+                            @error('required')
+                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
+                            @enderror
+
                             <div class="mt-15">
                                 <input type="text" class="form-control" name="phone" placeholder="Your Phone">
                             </div>
                             @error('phone')
                             <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
+
                             <div class="mt-15">
-                                <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                                <input type="text" class="form-control" name="phone" placeholder="WhatsUp Number">
                             </div>
-                            @error('message')
+                            @error('phone')
                             <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
+                            <div class="mt-4">
+                                <a href="#" class="btn mdi-cursor-pointer btn-hover-fill"><b>Let Us get to Know You</b></a>
+                            </div>
+{{--                            <div class="mt-15">--}}
+{{--                                <textarea class="form-control" name="message" placeholder="Message"></textarea>--}}
+{{--                            </div>--}}
+{{--                            @error('message')--}}
+{{--                            <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>--}}
+{{--                            @enderror--}}
                             <div class="mt-15">
                                 <div class="avatar-upload">
                                     <div class="avatar-edit">

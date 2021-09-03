@@ -69,21 +69,6 @@
                         </div>
                     </div>
                 </div>
-{{--                <div class="slide">--}}
-{{--                    <div class="img--holder" data-animation="kenburns" data-bg="images/content/slider/5.jpg"></div>--}}
-{{--                    <div class="slide-content center">--}}
-{{--                        <div class="vert-wrap container">--}}
-{{--                            <div class="vert">--}}
-{{--                                <div class="container">--}}
-{{--                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">We Provide--}}
-{{--                                        <br><b>Full Dental Care!</b></div>--}}
-{{--                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Your pathway to a bright new smile</div>--}}
-{{--                                    <div class="slide-btn"><a href="services.html" class="btn btn-white" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Know more</span><i class="icon-right-arrow"></i></a></div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
         </div>
     </div>
