@@ -1,6 +1,60 @@
 @extends('layouts.main')
 @section('content')
 @include('layouts.header')
+@push('styles')
+    <style>
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            position: absolute;
+            left: -9999px;
+        }
+        [type="radio"]:checked + label,
+        [type="radio"]:not(:checked) + label
+        {
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            line-height: 20px;
+            display: inline-block;
+            color: #666;
+        }
+        [type="radio"]:checked + label:before,
+        [type="radio"]:not(:checked) + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #ddd;
+            border-radius: 100%;
+            background: #fff;
+        }
+        [type="radio"]:checked + label:after,
+        [type="radio"]:not(:checked) + label:after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #1e76bd;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 100%;
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        [type="radio"]:not(:checked) + label:after {
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        [type="radio"]:checked + label:after {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    </style>
+@endpush
     <div class="page-content">
         <!--section-->
         <div class="section mt-0">
@@ -117,13 +171,13 @@
                             @enderror
 
                             <div class="mt-15">
-                                <input type="text" class="form-control" name="phone" placeholder="WhatsUp Number">
+                                <input type="text" class="form-control" name="phone" placeholder="WhatsApp Number">
                             </div>
                             @error('phone')
                             <span class="invalid-feedback d-block" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
                             <div class="mt-4">
-                                <a href="#" class="btn mdi-cursor-pointer btn-hover-fill"><b>Let Us get to Know You</b></a>
+                                <a href="#" class="btn mdi-cursor-pointer btn-hover-fill" data-toggle="modal" data-target="#exampleModal"><b>Let Us get to Know You</b></a>
                             </div>
 {{--                            <div class="mt-15">--}}
 {{--                                <textarea class="form-control" name="message" placeholder="Message"></textarea>--}}
@@ -153,6 +207,151 @@
         </div>
         <!--//section-->
     </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="max-height: 450px; overflow-y: auto;">
+                <form action="#" style="max-width: 450px; margin: 0 auto">
+
+                    <div class="form-group">
+                        <label>Are you Male or Female?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input type="radio" id="Male" name="radio-group1" checked>
+                                <label for="Male">Male</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="Female" name="radio-group1">
+                                <label for="Female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">How old are you?</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Have you seen a local Dentist?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input type="radio" id="HaveDentist" name="radio-group2" checked>
+                                <label for="HaveDentist">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="HaveNotDentist" name="radio-group2">
+                                <label for="HaveNotDentist">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">What did they suggest?</label>
+                        <textarea name="" id="" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label> Did they take a panoramic x-ray?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input   type="radio" id="x-ray" name="radio-group3" checked>
+                                <label for="x-ray">Yes</label>
+                            </div>
+                            <div>
+                                <input   type="radio" id="not-x-ray" name="radio-group3">
+                                <label for="not-x-ray">No</label>
+                            </div>
+                        </div>
+                        <div class="ifYes">
+                            <label for="">Can you upload them?</label>
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">How’s your general health?</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">What are you hoping to accomplish with your teeth (specifically)?</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">How long have you delayed taking care of the issue due to finances?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input type="radio" id="finances" name="radio-group4" checked>
+                                <label for="finances">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="nofinances" name="radio-group4">
+                                <label for="nofinances">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Have you ever visited beautiful Costa Rica?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input type="radio" id="visited" name="radio-group5" checked>
+                                <label for="visited">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="novisited" name="radio-group5">
+                                <label for="novisited">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Have you researched Dental Tourism in Costa Rica?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input type="radio" id="visitedDental" name="radio-group6" checked>
+                                <label for="visitedDental">Yes</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="novisitedDental" name="radio-group6">
+                                <label for="novisitedDental">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">When would you be ready to start work on your teeth?</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Would you have someone come with you for the procedure(s)?</label>
+                        <div class="d-flex">
+                            <div class="mr-3">
+                                <input  type="radio" id="procedure" name="radio-group7" >
+                                <label for="procedure">Yes</label>
+                            </div>
+                            <div >
+                                <input type="radio" id="noprocedurel" name="radio-group7" checked>
+                                <label for="noprocedurel">No</label>
+                            </div>
+                        </div>
+                        <div class="d-none ifYes">
+                            <label for="">If yes, please give us their:</label>
+                            <input type="text" class="form-control mb-2" placeholder="Name">
+                            <input type="text" class="form-control mb-2" placeholder="Email">
+                            <input type="text" class="form-control mb-2" placeholder="Age">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                <button type="button" class="btn">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection
 @push('scripts')
     <script>
@@ -170,5 +369,18 @@
         $("#imageUpload").change(function() {
             readURL(this);
         });
+    </script>
+    <script>
+
+            $('input[type=radio]').on('click', function () {
+                if ($(this).is(":checked") && ($(this).parent().find('label').text() === "Yes")) {
+                    $(this).parent().parent().parent().find('.ifYes').removeClass("d-none");
+                }else {
+                    $(this).parent().parent().parent().find('.ifYes').addClass("d-none");
+                }
+            })
+
+
+
     </script>
 @endpush
