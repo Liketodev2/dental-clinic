@@ -17,7 +17,7 @@
     <link href="{{asset("css/style.css")}}" rel="stylesheet">
     <link href="{{asset("css/main.css")}}" rel="stylesheet">
     <!--Favicon-->
-    <link rel="icon" href="{{asset("images/favicon.png")}}" type="image/x-icon">
+    <link rel="icon" href="{{asset("images/favicon.svg")}}" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">

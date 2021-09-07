@@ -53,6 +53,9 @@
             -webkit-transform: scale(1);
             transform: scale(1);
         }
+        label {
+            font-weight: bold;
+        }
     </style>
 @endpush
     <div class="page-content">
@@ -213,14 +216,22 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title text-center" id="exampleModalLabel">Modal title</h5>
+                <div class="px-5">
+                    <h4 class="modal-title text-center my-3" id="exampleModalLabel">
+                        Hi and welcome to Dr. Brenes: The Costa Rican Dentist
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li class="text-center">We don’t just treat teeth, we treat you, the person.</li>
+                        <li class="text-center">Afterall we only fix your teeth; it still takes you to Smile!</li>
+                        <li class="text-center">So please, allow us to get to know you a little bit so we can better serve you.</li>
+                    </ul>
+                </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" style="max-height: 450px; overflow-y: auto;">
-                <form action="#" style="max-width: 450px; margin: 0 auto">
-
+            <div class="modal-body px-5" style="max-height: 550px; overflow-y: auto;">
+                <form action="#">
                     <div class="form-group">
                         <label>Are you Male or Female?</label>
                         <div class="d-flex">
@@ -269,7 +280,9 @@
                         </div>
                         <div class="ifYes">
                             <label for="">Can you upload them?</label>
-                            <input type="file">
+                            <div>
+                                <input type="file">
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -371,7 +384,6 @@
         });
     </script>
     <script>
-
             $('input[type=radio]').on('click', function () {
                 if ($(this).is(":checked") && ($(this).parent().find('label').text() === "Yes")) {
                     $(this).parent().parent().parent().find('.ifYes').removeClass("d-none");
@@ -379,8 +391,5 @@
                     $(this).parent().parent().parent().find('.ifYes').addClass("d-none");
                 }
             })
-
-
-
     </script>
 @endpush
