@@ -56,36 +56,52 @@
                 <div class="col-xl-6 bg-grey">
                     <div class="max-670 mx-lg-auto px-15">
                         <div class="title-wrap">
-                            <h2 class="h1">Our <span class="theme-color">Advantages</span></h2>
+                            <h2 class="h1">Your <span class="theme-color">Greatest Concerns Addressed </span></h2>
                         </div>
                         <div class="mt-lg-5"></div>
                         <div class="row">
-                            <div class="col-sm-7">
-                                <ul class="marker-list-md">
-                                    <li>Specialists and Dentists as One Team</li>
-                                    <li>Initial Dental Assessment</li>
-                                    <li>All Types of Dental Services</li>
-                                    <li>Safety by Credentials</li>
-                                    <li>Dental Implant Experience</li>
-                                    <li>Innovation</li>
-                                    <li>3D Imaging Center</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-5 mt-1 mt-sm-0">
-                                <ul class="marker-list-md">
-                                    <li>On-site Laboratory</li>
-                                    <li>“Same Day” Dentistry</li>
-                                    <li>“Same Day” Dental Implants</li>
-                                    <li>Innovative Clinic Design</li>
-                                    <li>Complimentary Consultations</li>
-                                    <li>Insurance and Financing</li>
-                                    <li>Services Cost</li>
-                                </ul>
-                            </div>
+                            <ul class="marker-list-md">
+                                <li class="d-flex">
+                                    <div class="col-5">Will I be safe in Costa Rica?</div>
+                                    <div class="col-7">Tourism is #1 for our Economy – Safety is why</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">Quality of the Dentists?</div>
+                                    <div class="col-7">Trained in Costa Rica, The States & Germany</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">Will I get an Estimate?</div>
+                                    <div class="col-7">Send us the X-rays and we’ll estimate before you come</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">What happens if I need further X-rays?</div>
+                                    <div class="col-7">We’re fully equipped including X-rays</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">What if I don’t speak Spanish?</div>
+                                    <div class="col-7">Every Dentist, Doctor, Hotel or Tour speaks English</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">All Services needed?</div>
+                                    <div class="col-7">Full mouth, Implants, Grafting, Crowns, even Fillings</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">Is Costa Rica Medically Safe?</div>
+                                    <div class="col-7">US style Hospitals and a Dedicated Physician on staff</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">What can I expect while not in the chair?</div>
+                                    <div class="col-7">We help with Air, Lodging, Excursions & Car Rentals</div>
+                                </li>
+                                <li class="d-flex">
+                                    <div class="col-5">How do I start the process?</div>
+                                    <div class="col-7">Fill out the <a href="{{route('contact')}}">“Contact Us”</a> form or call us anytime!</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 banner-left bg-full" style="background-image: url(images/content/banner-right.jpg)"></div>
+                <div class="col-xl-6 banner-left bg-full" style="background-image: url(images/content/banner-right.jpg); background-size: cover;"></div>
             </div>
         </div>
     </div>
