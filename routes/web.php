@@ -54,10 +54,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // DASHBOARD
 Route::prefix('dashboard')
-    ->middleware(['dashboard','auth'])
+    ->middleware(['superAdmin','auth'])
     ->group(function(){
 
     Route::get('/index', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('users', '\App\Http\Controllers\Dashboard\UserController', ['as' => 'dashboard']);
 
 });
 // DASHBOARD

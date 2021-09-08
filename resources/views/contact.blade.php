@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-@include('layouts.header')
+    @include('layouts.header-main')
 @push('styles')
     <style>
         [type="radio"]:checked,

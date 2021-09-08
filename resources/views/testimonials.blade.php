@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    @include('layouts.header')
+    @include('layouts.header-main')
     <div class="page-content">
         <!--section-->
         <div class="section mt-0">
