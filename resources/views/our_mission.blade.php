@@ -152,7 +152,7 @@
             <div class="banner-center bg-cover" style="background-image: url(images/content/banner-center.jpg)">
                 <div class="banner-center-caption text-center">
                     <div class="banner-center-text1">Get the Smile You've Always Wanted!</div>
-                    <div class="banner-center-text2">We strive to provide the highest quality dental treatment at reasonable fees</div>
+                    <div class="banner-center-text2">YOUR TRUST coupled with DECADES OF TRAINING all at REASONABLE FEES</div>
                     <a href="#" class="btn btn-white mt-5" data-toggle="modal" data-target="#modalBookingForm"><i class="icon-right-arrow"></i><span>Request an Appointment</span><i class="icon-right-arrow"></i></a>
                 </div>
             </div>

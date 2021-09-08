@@ -9,7 +9,7 @@
                     <div class="breadcrumbs">
                         <a href="{{route('index')}}">Home</a>
                         <a href="{{route('our_specialist')}}">Our Specialists</a>
-                        <span>Dr. Frank Bigham</span>
+                        <span>Dr Iris Schmitz</span>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md">
                         <div class="doctor-page-photo text-center">
-                            <img src="images/content/doctor-page-photo.jpg" class="img-fluid" alt="">
+                            <img src="images/imgpsh_fullsize_anim.jpg" class="img-fluid" alt="">
                         </div>
                         <div class="mt-3 mt-md-5"></div>
                         <table class="table doctor-page-table">
@@ -53,11 +53,11 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="col-lg-8 mt-4 mt-lg-0">
+                    <div class="col-lg-8 mt-4 mt-lg-0 doctor-info-text">
                         <div class="doctor-info mb-3 mb-lg-4">
                             <div class="doctor-info-name">
-                                <h3>Dr. Frank Bigham</h3>
-                                <h6>Associate Dentist</h6>
+                                <h3>Dr Iris Schmitz</h3>
+                                <h6>The Dr. Iris Schmitz story</h6>
                             </div>
                             <div class="doctor-info-phone"><i class="icon-telephone"></i><a href="tel:+1-248-715-8767">1-248-715-8767</a></div>
                             <div class="doctor-info-social">
@@ -65,15 +65,26 @@
                                 <a href="mailto:info@dentco.net" class="hovicon"><i class="icon-black-envelope"></i></a>
                             </div>
                         </div>
-                        <p>Dr. Frank Bigham received his Doctorate in Medical Dentistry from Hospital, USA in 2003. Following his professional qualification, he practiced maxillofacial surgery at Hospital and the Royal Hospital. Dr. Bigham gained membership of the College of Surgeons of USA in 2007. He has over 10 years of experience working as a general dental practitioner in both Surrey and central. Dr. Bigham enjoys all aspects of his field especially cosmetic dentistry and prosthetics. Passionate in learning languages, he is fluent in both English and Arabic, and also speaks French and some Italian. His interests include sports and history.</p>
-                        <p>When asked what makes dentistry so rewarding, he said "My job is rewarding because sometimes even the simplest treatment can change the patient's confidence in himself/herself and I feel that I am part of a larger global healthcare promotion program."</p>
-                        <ul class="marker-list-md">
-                            <li><i>Member of the Royal College of Surgeons of USA</i></li>
-                            <li><i>Member of the General Dental Council (USA)</i></li>
-                        </ul>
+                        <p>Dental clinics, offices and suites are known worldwide as, well Dental clinics, offices and suites.</p>
+                        <p>We here at The Costa Rican Dentist realized long ago that patients, either local or from abroad, need peace of mind. Studies have shown that the best outcomes in Dentistry have been attained when the patient (you), are most comfortable in every facet of the treatment. To achieve that result, we were lucky enough to find Dr. Iris Schmitz. A Physician skilled in every discipline you can image and even some you can’t.</p>
+                        <p>Almost all the procedures we do are minor. Sure there’s short term bleeding, some pain after the anesthetic wears off, but nothing different from when you’re home. When you’re here however, there’s nothing Dr. Iris can’t help you with. Dr Iris is also fully licensed to write prescriptions as well, even if you forgot your medicine at home.</p>
+                        <p>Let’s meet Dr. Iris</p>
+                        <p>Born in Germany, she came to Costa Rica with her parents in time for high school. Learned the language and realized how wonderful the culture is and how different it was from Germany.</p>
+                        <p>She quickly realized the difficulty for the locals to afford a higher education (not unusual for a country with no middle class), so she decided a life of service to these classmates, friends and locals was her destiny.</p>
+                        <p>After high school, she got her Masters Degree in Medicine from the University of Costa Rica in 1992.
+                            Only 2 years later, she attained her Professional Degree, also from the same University.
+                        </p>
+                        <p>Learning how her professors got their top notch skills, she went to Florida and interned for 2 years in Emergency Medicine. This is where her experience in the many disciplines of medicine became sharpened.</p>
+                        <p>How best to serve?</p>
+                        <p>After working as a General Practitioner in literally every hospital in Capitol city of San Jose, and because of her many connections to the German people, Dr. Iris began working for the German Embassy here in Costa Rica. When a tourist came to Costa Rica and had health issues, Dr. Iris was called to help.</p>
+                        <p>Within the Embassy network, word got around about Dr. Iris. Soon it was the Swiss Embassy, then Austria and of course the US Embassy as well. </p>
+                        <p>Dr Iris’s fluency in English, Spanish and German was an important skill-set, but her kindness and compassion, her vast medical knowledge and her determination to help every patient with minor issues to major is what made her special.</p>
+                        <p>How did we get so lucky to have her join us? </p>
+                        <p>The Embassies mainly sent her to see tourists that came from their respective countries. Dr. Iris saw the opportunity and developed relationships with Tour operators. Her reputation was very well known with these operators, so it was a very easy transition. They felt more secure knowing she was close by.</p>
+                        <p>So Dr. Iris decided that being close to the airport (SJO) gave her a base of operations that would get her to her patients sooner. She’s now located inside the offices of The Costa Rican Dentist. We are thrilled to have her here. We’re even more thrilled to give you the peace of mind that when you choose Dr. Brenes, you have Dr. Iris in the same office.</p>
                         <div class="mt-4 mt-lg-6"></div>
                         <div class="collapse-wrap d-flex" data-toggle="collapse" data-target="#tab1">
-                            <h5 class="collapse-title">Dental Treatments of <span class="theme-color text-nowrap">Dr. Bigham</span></h5>
+                            <h5 class="collapse-title">Dental Treatments of <span class="theme-color text-nowrap">Dr Iris Schmitz</span></h5>
                             <div class="ml-auto"><i class="icon-bottom"></i></div>
                         </div>
                         <div id="tab1" class="collapse show">

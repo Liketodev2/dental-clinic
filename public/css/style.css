@@ -210,6 +210,11 @@ textarea {
 table {
   border-collapse: collapse; }
 
+.review{
+    width: 41px;
+    margin:0 auto!important;
+}
+
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -16578,6 +16583,9 @@ body:not(.touch) .quickLinks.stuck {
 .quickLinks:not(.stuck) {
   transform: translateY(0) !important; }
 
+.doctor-info-text p{
+    margin: 10px 0;
+}
 .quickLinks {
   width: 98px;
   z-index: 102;
@@ -16614,12 +16622,17 @@ body:not(.touch) .quickLinks.stuck {
     .quickLinks .col > .link > [class*='icon-'] {
       font-size: 38px;
       line-height: 1.3em; }
-    body:not(.touch) .quickLinks .col > .link:hover, .quickLinks .col > .link.active {
+    body:not(.touch) .quickLinks .col > .link:hover, .quickLinks .col > .link.active{
       text-decoration: none;
       color: #1e76bd;
       background-color: #fff !important;
-      box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.05); }
-  .quickLinks.stuck {
+      box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    body:not(.touch) .quickLinks .col > .link:hover svg path {
+        fill: #1e76bd;
+    }
+.quickLinks.stuck {
     position: fixed;
     width: 100%;
     max-width: 100vw;
@@ -16634,6 +16647,7 @@ body:not(.touch) .quickLinks.stuck {
     color: #1e76bd;
     background-color: #fff !important;
     box-shadow: inset 0 8px 8px rgba(0, 0, 0, 0.05); }
+
     .quickLinks .col-close a {
       display: block;
       position: relative;
