@@ -11,6 +11,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Email</th>
+                                <th scope="col">Role</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Actions</th>
                             </tr>
@@ -20,10 +21,15 @@
                                 <tr>
                                     <th scope="row">{{$item->id}}</th>
                                     <td>{{$item->email}}</td>
+                                    <td>{{$item->role}}</td>
                                     <td>{{$item->created_at}}</td>
                                     <td>
-                                        <button class="btn btn-secondary btn-sm ">Edit</button>
-                                        <button class="btn btn-danger btn-sm ">Delete</button>
+                                        <a href="{{route('dashboard.users.edit', $item->id)}}"><button class="btn btn-info btn-sm"><i class="fas fa-edit text-white"></i></button></a>
+                                        <button class="btn btn-danger btn-sm admin-remove-btn"> <i class="fas fa-trash text-white"></i></button>
+                                        <form action="{{route('dashboard.users.destroy', $item->id)}}" method="POST" class="d-none admin-remove-form">
+                                            @method('DELETE')
+                                            @csrf
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

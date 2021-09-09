@@ -23,7 +23,34 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
+
+                $role = Auth::user()->role;
+
+                switch ($role) {
+                    case 'super_admin':
+                        return redirect('dashboard/index');
+                        break;
+                    case 'coordinator':
+                        return redirect('coordinator/index');
+                        break;
+                    case 'accounting':
+                        return redirect('accounting/index');
+                        break;
+                    case 'dental_assistant':
+                        return redirect('dental_assistant/index');
+                        break;
+                    case 'travel_coordinator':
+                        return redirect('travel_coordinator/index');
+                        break;
+                    case 'media_relations':
+                        return redirect('media_relations/index');
+                        break;
+                    case 'operation_manager_and_doctor':
+                        return redirect('operation_manager_and_doctor/index');
+                        break;
+                    default:
+                        return redirect('/');
+                }
             }
         }
 

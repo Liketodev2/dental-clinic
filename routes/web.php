@@ -52,13 +52,66 @@ Route::get('/blog_post_page', [App\Http\Controllers\HomeController::class, 'blog
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
 // DASHBOARD
+
 Route::prefix('dashboard')
     ->middleware(['superAdmin','auth'])
     ->group(function(){
 
-    Route::get('/index', [App\Http\Controllers\Dashboard\DashboardController::class, 'index'])->name('dashboard.index');
-    Route::resource('users', '\App\Http\Controllers\Dashboard\UserController', ['as' => 'dashboard']);
+    Route::get('/index', [\App\Http\Controllers\Dashboard\SuperAdmin\DashboardController::class, 'index'])->name('dashboard.index');
+    Route::resource('users', '\App\Http\Controllers\Dashboard\SuperAdmin\UserController', ['as' => 'dashboard']);
 
 });
-// DASHBOARD
+
+Route::prefix('coordinator')
+    ->middleware(['coordinator','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\Coordinator\DashboardController::class, 'index'])->name('coordinator.index');
+
+});
+
+Route::prefix('accounting')
+    ->middleware(['accounting','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\Accounting\DashboardController::class, 'index'])->name('accounting.index');
+
+
+});
+
+Route::prefix('dental_assistant')
+    ->middleware(['dental_assistant','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\DentalAssistant\DashboardController::class, 'index'])->name('dental_assistant.index');
+
+});
+
+Route::prefix('travel_coordinator')
+    ->middleware(['travel_coordinator','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\TravelCoordinator\DashboardController::class, 'index'])->name('travel_coordinator.index');
+
+    });
+
+Route::prefix('media_relations')
+    ->middleware(['media_relations','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\MediaRelations\DashboardController::class, 'index'])->name('media_relations.index');
+
+    });
+
+Route::prefix('operation_manager_and_doctor')
+    ->middleware(['operation_manager_and_doctor','auth'])
+    ->group(function(){
+
+        Route::get('/index', [\App\Http\Controllers\Dashboard\OperationManagerAndDoctor\DashboardController::class, 'index'])->name('operation_manager_and_doctor.index');
+
+    });
+
+
+

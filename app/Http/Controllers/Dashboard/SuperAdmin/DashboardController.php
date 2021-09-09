@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Dashboard;
+namespace App\Http\Controllers\Dashboard\SuperAdmin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
@@ -17,7 +17,7 @@ class DashboardController extends Controller
     public function index(){
 
         $items = Contact::get();
-        return view('dashboard.index', compact('items'));
+        return view('dashboard.super_admin.index', compact('items'));
     }
 
 }
