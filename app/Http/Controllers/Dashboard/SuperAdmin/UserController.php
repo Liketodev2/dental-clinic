@@ -16,7 +16,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $items = User::paginate(20);
+        $items = User::whereNotIn('id',[1])->paginate(20);
 
         return view('dashboard.super_admin.users.index',compact('items'));
     }
@@ -75,7 +75,10 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('dashboard.super_admin.users.edit',compact('user'));
+        if($user->id != 1){
+            return view('dashboard.super_admin.users.edit',compact('user'));
+        }
+            return redirect()->back();
     }
 
     /**
