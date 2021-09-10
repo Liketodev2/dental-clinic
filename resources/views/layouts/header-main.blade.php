@@ -63,9 +63,9 @@
                                             <li><a class="dropdown-item" href="{{route('schedule')}}">Schedule Table</a></li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{route('testimonials')}}">Testimonials</a>
-                                    </li>
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="{{route('testimonials')}}">Testimonials</a>--}}
+{{--                                    </li>--}}
                                     <li class="nav-item dropdown">
                                         <a href="{{route('blog')}}" class="nav-link dropdown-toggle" data-toggle="dropdown">MD in Office</a>
                                         <ul class="dropdown-menu">

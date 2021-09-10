@@ -6,12 +6,9 @@
                     <a href="{{route('our_specialist')}}" class="link">
                         <i class="icon-hand"></i><span>Meet the Staff</span>
                     </a>
-{{--                    <div class="link-drop p-0">--}}
-{{--                        <div id="googleMapDrop" class="google-map"></div>--}}
-{{--                    </div>--}}
                 </div>
                 <div class="col">
-                    <a href="#" class="link">
+                    <a href="{{route('testimonials')}}" class="link">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;width: 40px;margin:10px auto" xml:space="preserve" fill="#fff">
 
@@ -57,30 +54,9 @@
 
                         <span>Testimonials </span>
                     </a>
-                {{--    <div class="link-drop">
-                        <h5 class="link-drop-title"><i class="icon-clock"></i>Working Time</h5>
-                        <table class="row-table">
-                            <tr>
-                                <td><i>Mon-Thu</i></td>
-                                <td>08:00 - 20:00</td>
-                            </tr>
-                            <tr>
-                                <td><i>Friday</i></td>
-                                <td> 07:00 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td><i>Saturday</i></td>
-                                <td>08:00 - 18:00</td>
-                            </tr>
-                            <tr>
-                                <td><i>Sunday</i></td>
-                                <td>Closed</td>
-                            </tr>
-                        </table>
-                    </div>--}}
                 </div>
                 <div class="col">
-                    <a href="#" class="link">
+                    <a href="{{route('brenes_gallery_simple')}}" class="link">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 430.23 430.23" style="enable-background:new 0 0 430.23 430.23;width: 35px;margin:10px auto" xml:space="preserve">
 
@@ -104,84 +80,6 @@
 
 </svg><span>Smile Gallery</span>
                     </a>
-                    {{--<div class="link-drop">
-                        <h5 class="link-drop-title"><i class="icon-pencil-writing"></i>Request Form</h5>
-                        <form id="requestForm" method="post" novalidate>
-                            <div class="successform">
-                                <p>Your message was sent successfully!</p>
-                            </div>
-                            <div class="errorform">
-                                <p>Something went wrong, try refreshing and submitting the form again.</p>
-                            </div>
-                            <div class="input-group">
-									<span>
-											<i class="icon-user"></i>
-										</span>
-                                <input name="requestname" type="text" class="form-control" placeholder="Your Name"/>
-                            </div>
-                            <div class="row row-sm-space mt-1">
-                                <div class="col">
-                                    <div class="input-group">
-											<span>
-													<i class="icon-email2"></i>
-												</span>
-                                        <input name="requestemail" type="text" class="form-control"
-                                               placeholder="Your Email"/>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="input-group">
-											<span>
-													<i class="icon-smartphone"></i>
-												</span>
-                                        <input name="requestphone" type="text" class="form-control"
-                                               placeholder="Your Phone"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="selectWrapper input-group mt-1">
-									<span>
-											<i class="icon-tooth"></i>
-										</span>
-                                <select name="requestservice" class="form-control">
-                                    <option selected="selected" disabled="disabled">Select Service</option>
-                                    <option value="Cosmetic Dentistry">Cosmetic Dentistry</option>
-                                    <option value="General Dentistry">General Dentistry</option>
-                                    <option value="Orthodontics">Orthodontics</option>
-                                    <option value="Children`s Dentistry">Children`s Dentistry</option>
-                                    <option value="Dental Implants">Dental Implants</option>
-                                    <option value="Dental Emergency">Dental Emergency</option>
-                                </select>
-                            </div>
-                            <div class="row row-sm-space mt-1">
-                                <div class="col-sm-6">
-                                    <div class="input-group flex-nowrap">
-											<span>
-														<i class="icon-calendar2"></i>
-													</span>
-                                        <div class="datepicker-wrap">
-                                            <input name="requestdate" type="text" class="form-control datetimepicker"
-                                                   placeholder="Date" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 mt-1 mt-sm-0">
-                                    <div class="input-group flex-nowrap">
-											<span>
-															<i class="icon-clock"></i>
-													</span>
-                                        <div class="datepicker-wrap">
-                                            <input name="requesttime" type="text" class="form-control timepicker"
-                                                   placeholder="Time" readonly>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-right mt-2">
-                                <button type="submit" class="btn btn-sm btn-hover-fill">Request</button>
-                            </div>
-                        </form>
-                    </div>--}}
                 </div>
                 <div class="col">
                     <a href="#" class="link">
@@ -200,31 +98,12 @@
 </svg>
                         <span>Upload X-Rays</span>
                     </a>
-                   {{-- <div class="link-drop">
-                        <h5 class="link-drop-title"><i class="icon-calendar"></i>Doctors Timetable</h5>
-                        <p>This simply works as a guide and helps you to connect with dentists of your choice. Please
-                            confirm the doctor’s availability before leaving your premises.</p>
-                        <p class="text-right"><a href="schedule.html" class="btn btn-sm btn-hover-fill">Details</a></p>
-                    </div>--}}
                 </div>
-
                 <div class="col">
-                    <a href="#" class="link">
-                        <i class="icon-emergency-call"></i><span>Contact Us</span></a>
-                {{--    <div class="link-drop">
-                        <h5 class="link-drop-title"><i class="icon-emergency-call"></i>Emergency Case</h5>
-                        <p>Emergency dental care may be needed if you have had a blow to the face, lost a filling, or
-                            cracked a tooth. </p>
-                        <ul class="icn-list">
-                            <li><i class="icon-telephone"></i><span
-                                    class="phone">1-800-267-0000<br>1-800-267-0001</span>
-                            </li>
-                            <li><i class="icon-black-envelope"></i><a href="mailto:info@besthotel-email.com">info@besthotel-email.com</a>
-                            </li>
-                        </ul>
-                        <p class="text-right mt-2"><a href="{{route('contact')}}" class="btn btn-sm btn-hover-fill">Our
-                                Contacts</a></p>
-                    </div>--}}
+                    <a href="{{route('contact')}}" class="link">
+                        <i class="icon-emergency-call"></i>
+                        <span>Contact Us</span>
+                    </a>
                 </div>
                 <div class="col col-close"><a href="#" class="js-quickLinks-close"><i class="icon-top"
                                                                                       data-toggle="tooltip"
