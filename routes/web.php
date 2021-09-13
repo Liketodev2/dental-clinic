@@ -55,11 +55,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // DASHBOARD
 
+Route::get('/settings', [\App\Http\Controllers\Dashboard\MainController::class, 'settings'])->name('main.settings');
+Route::post('/settings', [\App\Http\Controllers\Dashboard\MainController::class, 'settings_store'])->name('main.settings_store');
+Route::post('/admin_back', [\App\Http\Controllers\Dashboard\MainController::class, 'admin_back'])->name('main.admin_back');
+
 Route::prefix('dashboard')
     ->middleware(['superAdmin','auth'])
     ->group(function(){
 
     Route::get('/index', [\App\Http\Controllers\Dashboard\SuperAdmin\DashboardController::class, 'index'])->name('dashboard.index');
+    Route::post('/user_log_in', [\App\Http\Controllers\Dashboard\SuperAdmin\DashboardController::class, 'user_log_in'])->name('dashboard.user_log_in');
     Route::resource('users', '\App\Http\Controllers\Dashboard\SuperAdmin\UserController', ['as' => 'dashboard']);
 
 });

@@ -47,7 +47,7 @@
                                 <h5 class="mb-0 text-white nav-user-name">Admin </h5>
                             </div>
                            {{-- <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>--}}
-                          {{--  <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>--}}
+                            <a class="dropdown-item" href="{{route('main.settings')}}"><i class="fas fa-cog mr-2"></i>Setting</a>
                             <a class="dropdown-item" href="#"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf

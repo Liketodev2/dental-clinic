@@ -66,6 +66,7 @@ class LoginController extends Controller
      */
     public function __construct()
     {
+        \Session::forget('adminAccess');
         $this->middleware('guest')->except('logout');
     }
 }

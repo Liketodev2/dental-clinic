@@ -47,7 +47,7 @@
                                 <h5 class="mb-0 text-white nav-user-name">Admin </h5>
                             </div>
                             {{-- <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>--}}
-                            {{--  <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>--}}
+                            <a class="dropdown-item" href="{{route('main.settings')}}"><i class="fas fa-cog mr-2"></i>Setting</a>
                             <a class="dropdown-item" href="#"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
@@ -79,6 +79,12 @@
                         <li class="nav-item ">
                             <a class="nav-link active" href="{{route('dashboard.index')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                         </li>
+                        @if(\Session::get('adminAccess') && \Session::get('adminAccess') == 1)
+                            <form action="{{route('main.admin_back')}}" method="POST" class="d-inline-block">
+                                @csrf
+                                <button class="btn btn-sm btn-primary mt-4">Back to super admin</button>
+                            </form>
+                        @endif
                         {{--     <li class="nav-item ">
                                  <a class="nav-link active" href="{{route('dashboard.users.index')}}"><i class="fa fa-fw fa-users"></i>Users</a>
                              </li>--}}

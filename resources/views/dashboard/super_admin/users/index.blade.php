@@ -4,7 +4,7 @@
         <div class="container-fluid dashboard-content ">
             <div class="col-12">
                 <div class="card">
-                    <h5 class="card-header">Basic Table</h5>
+                    <h5 class="card-header">Users Table</h5>
                     <div class="card-body">
                         <table class="table">
                             <thead>
@@ -24,6 +24,11 @@
                                     <td>{{$item->role}}</td>
                                     <td>{{$item->created_at}}</td>
                                     <td>
+                                        <form action="{{route('dashboard.user_log_in')}}" method="POST" class="d-inline-block">
+                                            @csrf
+                                            <input type="hidden" name="user_id" value="{{$item->id}}">
+                                            <button class="btn btn-primary btn-sm "> <i class="fas fa-sign-in-alt text-white"></i></button>
+                                        </form>
                                         <a href="{{route('dashboard.users.edit', $item->id)}}"><button class="btn btn-info btn-sm"><i class="fas fa-edit text-white"></i></button></a>
                                         <button class="btn btn-danger btn-sm admin-remove-btn"> <i class="fas fa-trash text-white"></i></button>
                                         <form action="{{route('dashboard.users.destroy', $item->id)}}" method="POST" class="d-none admin-remove-form">
