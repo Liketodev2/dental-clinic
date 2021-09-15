@@ -77,7 +77,7 @@
                             Menu
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="{{route('dashboard.index')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                            <a class="nav-link active" href="{{route('travel_coordinator.index')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                         </li>
                         @if(\Session::get('adminAccess') && \Session::get('adminAccess') == 1)
                             <form action="{{route('main.admin_back')}}" method="POST" class="d-inline-block">
