@@ -67,6 +67,8 @@ Route::prefix('dashboard')
     Route::post('/user_log_in', [\App\Http\Controllers\Dashboard\SuperAdmin\DashboardController::class, 'user_log_in'])->name('dashboard.user_log_in');
     Route::resource('users', '\App\Http\Controllers\Dashboard\SuperAdmin\UserController', ['as' => 'dashboard']);
 
+    Route::resource('contact', '\App\Http\Controllers\Dashboard\SuperAdmin\ContactController', ['as' => 'dashboard']);
+
 });
 
 Route::prefix('coordinator')

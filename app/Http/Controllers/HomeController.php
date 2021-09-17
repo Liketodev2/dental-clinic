@@ -89,16 +89,58 @@ class HomeController extends Controller
 
     public function contactForm(Request $request){
 
-    $this->validate($request, [
-        'name'  => ['required'],
-        'email' => ['required'],
-        'phone' => ['required'],
-        'message' => ['required'],
-    ]);
+
+
+ /*       $this->validate($request, [
+            'name'  => ['required'],
+            'email' => ['required'],
+            'country' => ['required'],
+            'phone' => ['required'],
+            'whatsapp' => ['required'],
+            'image' => ['required'],
+        ]);*/
+
+        $file = $request->file('file');
+        $file_name = uniqid(rand(), true).'.'.$file->getClientOriginalExtension();
+        $file->move(public_path('/uploads/contact'), $file_name);
+
+        $file_modal = $request->file('modal_files');
+        $file_modal_name = uniqid(rand(), true).'.'.$file->getClientOriginalExtension();
+        $file_modal->move(public_path('/uploads/contact'),$file_modal_name);
+
+
+      $additional['modal_files'] = $file_modal_name;
+      $additional['health'] = $request['health'];
+      $additional['teeth'] = $request['teeth'];
+      $additional['suggest'] = $request['suggest'];
+      $additional['age'] = $request['age'];
+
+      $additional['radio-group1'] = $request['radio-group1'];
+      $additional['radio-group2'] = $request['radio-group2'];
+      $additional['radio-group3'] = $request['radio-group3'];
+      $additional['radio-group4'] = $request['radio-group4'];
+      $additional['radio-group5'] = $request['radio-group5'];
+      $additional['radio-group6'] = $request['radio-group6'];
+      $additional['radio-group7'] = $request['radio-group7'];
+      $additional['date_teeth'] = $request['date_teeth'];
+
+      $additional['additional_name'] = $request['additional_name'];
+      $additional['additional_email'] = $request['additional_email'];
+      $additional['additional_age'] = $request['additional_age'];
 
       $contact = new Contact();
-      $contact->fill($request->all());
-      $contact->save();
+
+      $contact->create([
+          'name' => $request['name'],
+          'email' => $request['email'],
+          'country' => $request['country'],
+          'phone' => $request['phone'],
+          'whatsapp' => $request['whatsapp'],
+          'additional' => serialize($additional),
+          'image' => $file_name,
+      ]);
+
+      return redirect()->back();
 
     }
 

@@ -20,7 +20,7 @@
             </div>
             <div class="ecommerce-widget">
                 <div class="row">
-                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                    <div class="col-12">
                         <div class="card">
                             <h5 class="card-header">Contact Messages</h5>
                             <div class="card-body p-0">
@@ -29,87 +29,46 @@
                                         <thead class="bg-light">
                                         <tr class="border-0">
                                             <th class="border-0">#</th>
+                                            <th class="border-0">Image</th>
                                             <th class="border-0">Name</th>
                                             <th class="border-0">Email</th>
+                                            <th class="border-0">Country</th>
                                             <th class="border-0">Phone</th>
-                                            <th class="border-0">Message</th>
+                                            <th class="border-0">Whatsapp</th>
+                                            <th class="border-0">Actions</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         @foreach($items as $item)
                                             <tr>
                                                 <td>{{$item->id}}</td>
-                                             {{--   <td>
+                                                <td><img class="img-thumbnail" style="object-fit: cover" width="150px" height="100px"   src="{{asset('uploads/contact/'.$item->image)}}" alt=""></td>
+                                             {{--<td>
                                                     <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
                                                 </td>--}}
                                                 <td>{{$item->name}}</td>
                                                 <td>{{$item->email}} </td>
+                                                <td>{{$item->country}} </td>
                                                 <td>{{$item->phone}}</td>
-                                                <td>{{$item->message}}</td>
+                                                <td>{{$item->whatsapp}}</td>
+                                                <td>
+                                                    <a href="{{route('dashboard.contact.show', $item->id)}}"><button class="btn btn-sm btn-info"><i class="fas fa-info text-white"></i></button></a>
+                                                    <button class="btn btn-danger btn-sm admin-remove-btn"> <i class="fas fa-trash text-white"></i></button>
+                                                    <form action="{{route('dashboard.contact.destroy', $item->id)}}" method="POST" class="d-none admin-remove-form">
+                                                        @method('DELETE')
+                                                        @csrf
+                                                    </form>
+
+                                                </td>
                                             </tr>
                                         @endforeach
                                         <tr>
-                                            <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
+                                            <td colspan="9" ><a href="{{route('dashboard.contact.index')}}" class="btn btn-outline-light float-right mt-4 mb-2">View Details</a></td>
                                         </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Information</h5>
-                            {{--<div class="card-body p-0">
-                                <div class="table-responsive">
-                                    <table class="table no-wrap p-table">
-                                        <thead class="bg-light">
-                                        <tr class="border-0">
-                                            <th class="border-0">Campaign</th>
-                                            <th class="border-0">Visits</th>
-                                            <th class="border-0">Revenue</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Campaign#1</td>
-                                            <td>98,789 </td>
-                                            <td>$4563</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Campaign#2</td>
-                                            <td>2,789 </td>
-                                            <td>$325</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Campaign#3</td>
-                                            <td>1,459 </td>
-                                            <td>$225</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Campaign#4</td>
-                                            <td>5,035 </td>
-                                            <td>$856</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Campaign#5</td>
-                                            <td>10,000 </td>
-                                            <td>$1000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Campaign#5</td>
-                                            <td>10,000 </td>
-                                            <td>$1000</td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="3">
-                                                <a href="#" class="btn btn-outline-light float-right">Details</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>--}}
                         </div>
                     </div>
                 </div>

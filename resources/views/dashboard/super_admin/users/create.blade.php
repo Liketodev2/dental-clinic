@@ -34,7 +34,7 @@
                                         <option {{old('role') == 'operation_manager_and_doctor' ? 'selected' : '' }} value="operation_manager_and_doctor">Operation manager and Doctor</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-sm btn-secondary">Create</button>
+                                <button class="btn btn-sm btn-primary">Create</button>
                             </form>
                         </div>
                     </div>

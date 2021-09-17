@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('dashboard/assets/vendor/charts/c3charts/c3.css')}}">
     <link rel="stylesheet" href="{{asset('dashboard/assets/vendor/fonts/flag-icon-css/flag-icon.min.css')}}">
     <title>Dental Clinic</title>
+    @stack('styles')
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                             Menu
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link active" href="{{route('dashboard.index')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                            <a class="nav-link " href="{{route('dashboard.index')}}"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                         </li>
                    {{--     <li class="nav-item ">
                             <a class="nav-link active" href="{{route('dashboard.users.index')}}"><i class="fa fa-fw fa-users"></i>Users</a>
@@ -94,6 +95,9 @@
                                     </li>
                                 </ul>
                             </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="{{route('dashboard.contact.index')}}"><i class="fa fa-fw fa-address-card"></i>Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -153,6 +157,7 @@
 <script src="{{asset('dashboard/assets/vendor/charts/c3charts/C3chartjs.js')}}"></script>
 <script src="{{asset('dashboard/assets/libs/js/dashboard-ecommerce.js')}}"></script>
 <script src="{{asset('js/admin.js')}}"></script>
+@stack('scripts')
 </body>
 
 </html>

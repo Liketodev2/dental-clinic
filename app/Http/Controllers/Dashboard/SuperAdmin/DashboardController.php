@@ -19,7 +19,8 @@ class DashboardController extends Controller
 
     public function index(){
 
-        $items = Contact::get();
+        $items = Contact::orderBy('created_at', 'desc')->limit(6)->get();
+
         return view('dashboard.super_admin.index', compact('items'));
     }
 

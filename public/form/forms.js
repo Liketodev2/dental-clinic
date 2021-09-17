@@ -5,7 +5,7 @@
 var $document = $(document),
 	$window = $(window),
 	forms = {
-	contactForm: $('#contactForm'),
+/*	contactForm: $('#contactForm'),*/
 	questionForm: $('#questionForm'),
 	bookingForm: $('#bookingForm'),
 	requestForm: $('#requestForm')
@@ -46,7 +46,7 @@ $document.on('ready', function () {
 	}
 
 	// contact page form
-	if (forms.contactForm.length) {
+/*	if (forms.contactForm.length) {
 		var $contactform = forms.contactForm;
 		$contactform.validate({
 			rules: {
@@ -92,7 +92,7 @@ $document.on('ready', function () {
 				});
 			}
 		});
-	}
+	}*/
 
 	// question form
 	if (forms.questionForm.length) {

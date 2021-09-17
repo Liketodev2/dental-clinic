@@ -35,7 +35,7 @@
                                         <option {{$user->role == 'operation_manager_and_doctor' ? 'selected' : '' }} value="operation_manager_and_doctor">Operation manager and Doctor</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-sm btn-secondary">Update</button>
+                                <button class="btn btn-sm btn-primary">Update</button>
                             </form>
                         </div>
                     </div>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('dashboard/assets/vendor/charts/c3charts/c3.css')}}">
     <link rel="stylesheet" href="{{asset('dashboard/assets/vendor/fonts/flag-icon-css/flag-icon.min.css')}}">
     <title>Dental Clinic</title>
+    @stack('styles')
 </head>
 
 <body>
@@ -159,6 +160,7 @@
 <script src="{{asset('dashboard/assets/vendor/charts/c3charts/C3chartjs.js')}}"></script>
 <script src="{{asset('dashboard/assets/libs/js/dashboard-ecommerce.js')}}"></script>
 <script src="{{asset('js/admin.js')}}"></script>
+@stack('scripts')
 </body>
 
 </html>

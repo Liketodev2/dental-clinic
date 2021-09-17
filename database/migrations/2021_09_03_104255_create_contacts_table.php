@@ -17,8 +17,10 @@ class CreateContactsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('country');
             $table->string('phone')->nullable();
-            $table->string('message');
+            $table->string('whatsapp')->nullable();
+            $table->longText('additional');
             $table->string('image')->nullable();
             $table->timestamps();
         });

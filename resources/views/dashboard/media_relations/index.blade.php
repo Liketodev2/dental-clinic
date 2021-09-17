@@ -3,61 +3,9 @@
     <div class="dashboard-ecommerce">
         <div class="container-fluid dashboard-content ">
             <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="col-12">
                     <div class="page-header">
-                        <h2 class="pageheader-title">Media Relations </h2>
-                     {{--   <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
-                        <div class="page-breadcrumb">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">E-Commerce Dashboard Template</li>
-                                </ol>
-                            </nav>
-                        </div>--}}
-                    </div>
-                </div>
-            </div>
-            <div class="ecommerce-widget">
-                <div class="row">
-                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Contact Messages</h5>
-                            <div class="card-body p-0">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead class="bg-light">
-                                        <tr class="border-0">
-                                            <th class="border-0">#</th>
-                                            <th class="border-0">Name</th>
-                                            <th class="border-0">Email</th>
-                                            <th class="border-0">Phone</th>
-                                            <th class="border-0">Message</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach($items as $item)
-                                            <tr>
-                                                <td>{{$item->id}}</td>
-                                             {{--   <td>
-                                                    <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
-                                                </td>--}}
-                                                <td>{{$item->name}}</td>
-                                                <td>{{$item->email}} </td>
-                                                <td>{{$item->phone}}</td>
-                                                <td>{{$item->message}}</td>
-                                            </tr>
-                                        @endforeach
-                                        <tr>
-                                            <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                        <h2 class="pageheader-title">Media Relations</h2>
                         <div class="card">
                             <h5 class="card-header">Information</h5>
                             {{--<div class="card-body p-0">

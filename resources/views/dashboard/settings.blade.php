@@ -23,7 +23,7 @@
                                     <label >Password</label>
                                     <input type="password" class="form-control form-control-sm" name="password">
                                 </div>
-                                <button class="btn btn-sm btn-secondary">Update</button>
+                                <button class="btn btn-sm btn-primary">Update</button>
                             </form>
                         </div>
                     </div>
